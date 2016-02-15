@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="chs">
+<html xmlns:wb="http://open.weibo.com/wb">
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="UTF-8">
     <title>地图尺-测量地球上任意位置</title>
     <link rel = "Shortcut Icon" href="images/favicon.ico">
@@ -14,6 +15,7 @@
 
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=XIKjqrIab5m4ABOLqHhmZHEB"></script>
     <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -21,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
 
     <meta name="keywords" content="百度地图,测量,面积,距离,测距,测面积,地图,Planimeter,在线,工具,丈量,map,measure" />
-
+    <script src="http://ajax.useso.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   </head>
   <body>
     <section class="page-header">
@@ -30,23 +32,23 @@
       <a href="https://hellobanny.github.io/mapmeasure" class="btn">Google地图</a>
       <a href="https://itunes.apple.com/app/id476039389" class="btn">下载iOS客户端</a>
       <a href="https://itunes.apple.com/app/id983873587" class="btn">下载iOS试用版</a>
+
     </section>
 
     <section class="main-content">
       <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true">
-  <span aria-hidden="true" class="octicon octicon-link"></span></a>在线体验版
+        <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true">
+        <span aria-hidden="true" class="octicon octicon-link"></span></a>在线体验版
       </h3>
-<p>在线地图尺可以在卫星地图上测量自定义路径的长度和任意多边形的面积.</p>
-<p>使用说明:<br/>
+        <p>在线地图尺可以在卫星地图上测量自定义路径的长度和任意多边形的面积.</p>
+        <p>使用说明:<br/>
       - 点击地图中的<a style="color: red;">测距</a>按钮测量距离;<br/>
       - 点击<a style="color: red;">测面积</a>按钮测量面积;<br/>
       - 点击<a style="color: red;">清空</a>按钮清空所有点.</p>
 
+        <div id="searchBox"></div>
+        <div id="container" style="width: auto;height: 700px"></div>
 
-      <div id="searchBox"></div>
-  <div id="container" style="width: auto;height: 700px">
-  </div>
 
   <p></p>
 
@@ -74,7 +76,6 @@
         <img src="images/5-1.jpg">
         <img src="images/5-2.jpg">
       </p>
-<h3>
       <footer class="site-footer">
         <h3>联系方式:</h3>
         <span class="site-footer-owner">邮箱:<a href="mailto:hellobanny@gmail.com">hellobanny#gmail.com</a></span>
@@ -237,4 +238,14 @@
     map.removeOverlay(arealabelMarker);
 
   });
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73774073-2', 'auto');
+  ga('send', 'pageview');
+
 </script>
